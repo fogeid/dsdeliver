@@ -1,0 +1,7 @@
+.navbar__wrapper {
+  height: 70px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+}

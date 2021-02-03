@@ -1,10 +1,16 @@
+import { useEffect } from 'react';
 import './App.css';
-import Hello from './Hello';
+import Navbar from './components/Navbar/index';
 
 function App() {
+
+  useEffect(() => {
+
+  }, []);
+
   return (
     <div>
-      <Hello message="DS2!" />
+      <Navbar />
     </div>
   );
 }
