@@ -7,11 +7,11 @@ function HomeContent() {
             <div className="home__wrapper">
                 <h1>Faça seu pedido que entregamos pra você!!!</h1>
                 <p>Escolha o seu pedido e em poucos minutos levaremoss na sua porta</p>
-                <button>Fazer Pedido</button>
+                <a href="orders"><button>Fazer Pedido</button></a>
             </div>
-            <a href="orders"><img src={imgHome} alt="Entrega Comida"/></a>
+            <img src={imgHome} alt="Entrega Comida"/>
         </div>
     );
-}
+};
 
 export default HomeContent;

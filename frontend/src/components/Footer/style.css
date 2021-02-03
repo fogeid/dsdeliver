@@ -1,0 +1,19 @@
+.footer__container {
+  padding: 10px 0;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  text-align: center;
+}
+
+.footer__icons ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__icons ul li {
+  margin: 0 10px;
+}
