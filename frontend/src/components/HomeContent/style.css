@@ -8,20 +8,20 @@
   box-sizing: border-box;
 }
 
-.home__wrapper .home__title {
+.home__content .home__title {
   font-size: 55px;
   line-height: 1.3;
   margin: 0;
   color: var(--primary-text-color);
 }
 
-.home__wrapper .home__subtitle {
+.home__content .home__subtitle {
   font-size: 24px;
   color: var(--secondary-text-color);
   margin: 40px 0;
 }
 
-.home__wrapper .home__btn {
+.home__content .home__btn {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: bold;
@@ -34,7 +34,7 @@
   outline: none;
 }
 
-.home__wrapper .home__btn:hover {
+.home__content .home__btn:hover {
   background-color: var(--primary-hover-color);
   transition: all ease 0.5s;
 }
@@ -50,15 +50,15 @@
     padding: 50px 30px;
   }
 
-  .home__wrapper {
+  .home__content {
     text-align: center;
   }
 
-  .home__wrapper .home__title {
+  .home__content .home__title {
     font-size: 28px;
   }
 
-  .home__wrapper .home__subtitle {
+  .home__content .home__subtitle {
     font-size: 22px;
   }
 

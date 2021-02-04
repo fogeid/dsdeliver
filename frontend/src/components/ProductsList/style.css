@@ -1,0 +1,14 @@
+.list__container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-color);
+}
+
+.list__items {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 235px);
+  grid-gap: 20px 15px;
+  justify-content: space-between;
+  margin: 30px 0;
+}
