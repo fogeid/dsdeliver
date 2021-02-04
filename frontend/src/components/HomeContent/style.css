@@ -1,20 +1,26 @@
 .home__container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  padding: 130px 0;
+  padding: 130px;
   display: flex;
   flex-direction: row;
+  background-color: var(--secondary-color);
+  box-sizing: border-box;
+}
+
+.home__wrapper {
 }
 
 .home__wrapper h1 {
   font-size: 55px;
   line-height: 1.3;
   margin-top: 0;
+  color: var(--primary-text-color);
 }
 
 .home__wrapper p {
   font-size: 24px;
-  color: var(--secondary-color);
+  color: var(--secondary-text-color);
 }
 
 .home__wrapper button {
@@ -28,4 +34,9 @@
   border-radius: 5px;
   cursor: pointer;
   outline: none;
+}
+
+.home__wrapper button:hover {
+  background-color: var(--primary-hover-color);
+  transition: all ease 0.5s;
 }

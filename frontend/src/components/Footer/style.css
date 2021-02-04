@@ -1,6 +1,6 @@
 .footer__container {
   padding: 10px 0;
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
   color: var(--light-color);
   text-align: center;
 }
