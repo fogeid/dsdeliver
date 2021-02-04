@@ -10,19 +10,19 @@ function Footer() {
             <div className="footer__icons">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="https://fogeid.github.io/" target="_new">
                             <img src={Youtube} alt=""/>
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="https://fogeid.github.io/" target="_new">
                             <img src={Linkedin} alt=""/>
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="https://fogeid.github.io/" target="_new">
                             <img src={Instagram} alt=""/>
                         </a>
                     </li>
