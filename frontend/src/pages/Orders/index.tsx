@@ -4,6 +4,7 @@ import { fetchProducts } from '../../services/api';
 import Navbar from "../../components/Navbar";
 import StepsHeader from "../../components/StepsHeader";
 import ProductsList from "../../components/ProductsList";
+import Location from "../../components/Location";
 import Footer from '../../components/Footer';
 
 function Orders() {
@@ -20,6 +21,7 @@ function Orders() {
             <Navbar />
             <StepsHeader />
             <ProductsList products={products} />
+            <Location />
             <Footer />
         </>
     )
