@@ -1,17 +1,35 @@
+import { Product } from '../../pages/Orders/types';
 import './style.css';
-import imgCard from "../../assets/pizzacalabresaacebolada.png";
 
-function ProductCard() {
+type Props = {
+    product: Product;
+};
+
+function formatPrice(price: number) {
+    const formatter = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        minimumFractionDigits: 2
+    });
+
+    return formatter.format(price);
+};
+
+function ProductCard({ product }: Props) {
     return (
         <div className="card__container">
-            <h3 className="card__title">Pizza Calabresa</h3>
-            <img src={imgCard} className="card__img" alt=""/>
-            <h3 className="card__price">R$ 35,90</h3>
+            <h3 className="card__title">{product.name}</h3>
+            <img
+                src={product.imageUri}
+                className="card__img"
+                alt={product.name}
+            />
+            <h3 className="card__price">
+                {formatPrice(product.price)}
+            </h3>
             <div className="card__description">
                 <h3>Descrição</h3>
-                <p>
-                    Uma deliciosa combinação de Linguiça Calabresa, rodelas de cebolas frescas, azeitonas pretas, mussarela, polpa de tomate, orégano e massa especial.
-                </p>                 
+                <p>{product.description}</p>
             </div>
         </div>
     );
