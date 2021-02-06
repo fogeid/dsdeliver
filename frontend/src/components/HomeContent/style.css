@@ -27,8 +27,8 @@
   font-weight: bold;
   padding: 15px 30px;
   border: none;
-  color: var(--light-color);
-  background-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--light-color);
   border-radius: 5px;
   cursor: pointer;
   outline: none;
@@ -36,6 +36,7 @@
 
 .home__content .home__btn:hover {
   background-color: var(--primary-hover-color);
+  color: var(--light-color);
   transition: all ease 0.5s;
 }
 

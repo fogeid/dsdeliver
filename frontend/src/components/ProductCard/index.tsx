@@ -3,6 +3,8 @@ import './style.css';
 
 type Props = {
     product: Product;
+    onSelectProduct: (product: Product) => void;
+    isSelected: boolean;
 };
 
 function formatPrice(price: number) {
@@ -15,9 +17,12 @@ function formatPrice(price: number) {
     return formatter.format(price);
 };
 
-function ProductCard({ product }: Props) {
+function ProductCard({ product, onSelectProduct, isSelected }: Props) {
     return (
-        <div className="card__container">
+        <div
+            onClick={() => onSelectProduct(product)}
+            className={`card__container ${isSelected ? 'selected' : ''}`}
+        >
             <h3 className="card__title">{product.name}</h3>
             <img
                 src={product.imageUri}

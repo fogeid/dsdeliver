@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://diegobatista-dsdeliver.herokuapp.com"
+const API_URL = 'https://diegobatista-dsdeliver.herokuapp.com'
 const mapboxToken = process.env.REACT_APP_ACESS_TOKEN_MAP_BOX;
 
 export function fetchProducts() {
