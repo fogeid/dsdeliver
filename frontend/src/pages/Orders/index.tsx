@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import { OrderLocationData, Product } from './types';
-import { fetchProducts } from '../../services/api';
+import { fetchProducts, saveOrder } from '../../services/api';
 import Navbar from '../../components/Navbar';
 import StepsHeader from '../../components/StepsHeader';
 import ProductsList from '../../components/ProductsList';
@@ -8,6 +9,7 @@ import Location from '../../components/Location';
 import Summary from '../../components/Summary';
 import Footer from '../../components/Footer';
 import { checkIsSelected } from './helpers';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Orders() {
     const [products, setProducts] = useState<Product[]>([]);
@@ -21,7 +23,9 @@ function Orders() {
     useEffect(() => {
         fetchProducts()
             .then(response => setProducts(response.data))
-            .catch(error => console.log(error));
+            .catch(error => {
+                toast.warning('Erro ao listar produtos');
+            });
     }, []);
 
     const handleSelectProduct = (product: Product) => {
@@ -33,6 +37,22 @@ function Orders() {
         } else {
             setSelectedProducts(previous => [...previous, product]);
         }
+    }
+
+    const handleSubmit = () => {
+        const productsIds = selectedProducts.map(({ id }) => ({ id }));
+        const payload = {
+            ...orderLocation!,
+            products: productsIds
+        }
+
+        saveOrder(payload).then((response) => {
+            toast.dark(`Pedido enviado com sucesso! Nº ${response.data.id}`);
+            setSelectedProducts([]);
+        })
+            .catch(() => {
+                toast.warning('Erro ao enviar pedido');
+            })
     }
 
     return (
@@ -51,6 +71,7 @@ function Orders() {
             <Summary
                 amount={selectedProducts.length}
                 totalPrice={totalPrice}
+                onSubmit={handleSubmit}
             />
             <Footer />
         </>

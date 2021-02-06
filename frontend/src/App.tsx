@@ -1,15 +1,13 @@
-import { useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Routes from './Routes';
 
 function App() {
-
-  useEffect(() => {
-
-  }, []);
-
   return (
-    <Routes />
+    <>
+      <Routes />
+      <ToastContainer />
+    </>
   );
 }
 
