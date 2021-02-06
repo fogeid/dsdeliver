@@ -14,6 +14,10 @@ function Orders() {
     const [selectedProducts, setSelectedProducts] = useState<Product[]>([]);
     const [orderLocation, setOrderLocation] = useState<OrderLocationData>()
 
+    const totalPrice = selectedProducts.reduce((sum, item) => {
+        return sum + item.price;
+    }, 0);
+
     useEffect(() => {
         fetchProducts()
             .then(response => setProducts(response.data))
@@ -44,7 +48,10 @@ function Orders() {
                 onChangeLocation={location =>
                     setOrderLocation(location)}
             />
-            <Summary />
+            <Summary
+                amount={selectedProducts.length}
+                totalPrice={totalPrice}
+            />
             <Footer />
         </>
     )
