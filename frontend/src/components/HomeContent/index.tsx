@@ -1,6 +1,6 @@
-import './style.css';
 import imgHome from '../../assets/imgHome.png';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 function HomeContent() {
     return (
@@ -10,7 +10,7 @@ function HomeContent() {
                 <p className="home__subtitle">Escolha o seu pedido e em poucos minutos levaremoss na sua porta</p>
                 <Link to="/orders" className="home__btn">Fazer Pedido</Link>
             </div>
-            <img src={imgHome} className="home__img" alt="Entrega Comida"/>
+            <img src={imgHome} className="home__img" alt="Entrega Comida" />
         </div>
     );
 };

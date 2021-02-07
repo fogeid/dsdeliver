@@ -9,6 +9,6 @@ function App() {
       <ToastContainer />
     </>
   );
-}
+};
 
 export default App;

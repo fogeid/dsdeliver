@@ -1,7 +1,7 @@
-import './style.css';
 import Youtube from '../../assets/youtube.png';
 import Linkedin from '../../assets/linkedin.png';
 import Instagram from '../../assets/instagram.png';
+import './style.css';
 
 function Footer() {
     return (
@@ -11,19 +11,19 @@ function Footer() {
                 <ul>
                     <li>
                         <a href="https://fogeid.github.io/" target="_new">
-                            <img src={Youtube} alt=""/>
+                            <img src={Youtube} alt="" />
                         </a>
                     </li>
 
                     <li>
                         <a href="https://fogeid.github.io/" target="_new">
-                            <img src={Linkedin} alt=""/>
+                            <img src={Linkedin} alt="" />
                         </a>
                     </li>
 
                     <li>
                         <a href="https://fogeid.github.io/" target="_new">
-                            <img src={Instagram} alt=""/>
+                            <img src={Instagram} alt="" />
                         </a>
                     </li>
                 </ul>

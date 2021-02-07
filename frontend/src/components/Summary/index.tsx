@@ -1,5 +1,5 @@
-import './style.css';
 import { formatPrice } from '../../pages/Orders/helpers';
+import './style.css';
 
 type Props = {
     amount: number;
@@ -32,6 +32,6 @@ function Summary({ amount, totalPrice, onSubmit }: Props) {
             </div>
         </div>
     );
-}
+};
 
 export default Summary;

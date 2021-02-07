@@ -36,15 +36,15 @@ function Orders() {
             setSelectedProducts(selected);
         } else {
             setSelectedProducts(previous => [...previous, product]);
-        }
-    }
+        };
+    };
 
     const handleSubmit = () => {
         const productsIds = selectedProducts.map(({ id }) => ({ id }));
         const payload = {
             ...orderLocation!,
             products: productsIds
-        }
+        };
 
         saveOrder(payload).then((response) => {
             toast.dark(`Pedido enviado com sucesso! Nº ${response.data.id}`);
@@ -52,8 +52,8 @@ function Orders() {
         })
             .catch(() => {
                 toast.warning('Erro ao enviar pedido');
-            })
-    }
+            });
+    };
 
     return (
         <>
@@ -76,6 +76,6 @@ function Orders() {
             <Footer />
         </>
     )
-}
+};
 
 export default Orders;

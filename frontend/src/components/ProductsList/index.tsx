@@ -1,7 +1,7 @@
-import './style.css';
 import ProductCard from '../../components/ProductCard';
 import { Product } from '../../pages/Orders/types';
 import { checkIsSelected } from '../../pages/Orders/helpers';
+import './style.css';
 
 type Props = {
     products: Product[];
