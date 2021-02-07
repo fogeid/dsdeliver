@@ -1,12 +1,12 @@
 import axios from "axios";
 import { OrderPayload } from "../pages/Orders/types";
 
-const API_URL = 'https://diegobatista-dsdeliver.herokuapp.com'
+const API_URL = process.env.REACT_APP_API_URL;
 const mapboxToken = process.env.REACT_APP_ACESS_TOKEN_MAP_BOX;
+console.log(API_URL);
 
 export function fetchProducts() {
     return axios(`${API_URL}/products`);
-    // console.log(axios);
 };
 
 export function fetchLocalMapBox(local: string) {
